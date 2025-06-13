@@ -1,0 +1,576 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligence Émotionnelle et Performance Sportive - Chapitre 5</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #fffef7 0%, #fef9e7 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 6px solid #FFD243;
+        }
+
+        .main-title {
+            font-size: 2.2em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .chapter-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #FFD243, #f4c430);
+            color: #2c3e50;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(255, 210, 67, 0.3);
+        }
+
+        .chapter-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .chapter-subtitle {
+            font-size: 1.1em;
+            color: #34495e;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid #FFD243;
+        }
+
+        .section-title {
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            border: 2px solid #FFD243;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #FFD243, #f4c430);
+            color: #2c3e50;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+
+        .highlight-box::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -30%;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+
+        .strategies-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .strategy-card {
+            background: #fff8e1;
+            padding: 25px;
+            border-radius: 15px;
+            border: 2px solid #FFD243;
+            text-align: center;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .strategy-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(255, 210, 67, 0.2);
+        }
+
+        .strategy-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 210, 67, 0.1);
+            border-radius: 50%;
+        }
+
+        .strategy-number {
+            background: linear-gradient(45deg, #FFD243, #f4c430);
+            color: #2c3e50;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-weight: bold;
+            margin: 0 auto 15px auto;
+            font-size: 1.1em;
+            position: relative;
+            z-index: 2;
+        }
+
+        .strategy-title {
+            font-weight: bold;
+            color: #2c3e50;
+            font-size: 1.2em;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            position: relative;
+            z-index: 2;
+        }
+
+        .strategy-description {
+            color: #5a6c7d;
+            font-size: 0.95em;
+            position: relative;
+            z-index: 2;
+        }
+
+        .warning-box {
+            background: linear-gradient(135deg, #fff8e1, #fff3c4);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            color: #2c3e50;
+            border: 2px solid #FFD243;
+            position: relative;
+        }
+
+        .warning-box::before {
+            content: '⚠️';
+            position: absolute;
+            top: -15px;
+            left: 20px;
+            background: white;
+            padding: 5px 10px;
+            font-size: 1.3em;
+            border-radius: 50%;
+        }
+
+        .warning-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            margin-top: 10px;
+            color: #2c3e50;
+        }
+
+        .warning-effects {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 15px;
+            margin-top: 15px;
+        }
+
+        .effect-item {
+            background: rgba(255, 255, 255, 0.8);
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #FFD243;
+            font-size: 0.9em;
+            color: #5a6c7d;
+        }
+
+        .tennis-example {
+            background: #fff8e1;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 2px dashed #FFD243;
+            position: relative;
+        }
+
+        .tennis-example::before {
+            content: '🎾';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+            font-size: 1.2em;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .tips-section {
+            background: linear-gradient(135deg, #fff8e1, #fff3c4);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            color: #2c3e50;
+            border: 2px solid #FFD243;
+        }
+
+        .tips-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .tips-title::before {
+            content: '💡';
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .tip-item {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #FFD243;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .tip-item:last-child {
+            margin-bottom: 0;
+        }
+
+        .technique-showcase {
+            background: linear-gradient(135deg, #fff3c4, #FFD243);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            color: #2c3e50;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .technique-showcase::before {
+            content: '';
+            position: absolute;
+            top: -30%;
+            left: -30%;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+        }
+
+        .technique-showcase::after {
+            content: '';
+            position: absolute;
+            bottom: -40%;
+            right: -40%;
+            width: 120px;
+            height: 120px;
+            background: rgba(255, 255, 255, 0.15);
+            border-radius: 50%;
+        }
+
+        .technique-steps {
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            flex-wrap: wrap;
+            margin: 20px 0;
+            position: relative;
+            z-index: 2;
+        }
+
+        .technique-step {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 25px;
+            margin: 5px;
+            border: 2px solid #2c3e50;
+            font-weight: 600;
+            color: #2c3e50;
+            font-size: 0.9em;
+            min-width: 120px;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #34495e;
+        }
+
+        li strong {
+            color: #2c3e50;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #34495e;
+            text-align: justify;
+        }
+
+        .conclusion {
+            background: linear-gradient(135deg, #fffef7, #fef9e7);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+            border: 2px solid #FFD243;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .nav-button {
+            background: linear-gradient(45deg, #FFD243, #f4c430);
+            color: #2c3e50;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .nav-button.disabled {
+            background: #e0e0e0;
+            color: #999;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .main-title {
+                font-size: 1.8em;
+            }
+            
+            .strategies-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+
+            .technique-steps {
+                flex-direction: column;
+            }
+
+            .warning-effects {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">Intelligence Émotionnelle et Performance Sportive</h1>
+            <p class="subtitle">Guide Pratique - 8 chapitres pour optimiser ta performance sportive grâce à de meilleures compétences émotionnelles</p>
+        </div>
+
+        <div class="content-section">
+            <div class="chapter-badge">Chapitre 5</div>
+            <h2 class="chapter-title">Transformer ta Relation aux Émotions Difficiles</h2>
+            <p class="chapter-subtitle">[Accepter, prendre du recul et recadrer pour performer]</p>
+
+            <div class="highlight-box">
+                <h3 class="section-title" style="color: #2c3e50; padding-left: 0; margin-bottom: 15px;">Pourquoi c'est crucial pour ta performance</h3>
+                <p style="color: #2c3e50; margin-bottom: 0;">Les émotions difficiles (stress, peur, frustration) font partie intégrante du sport de performance. Tenter de les éviter ou de les combattre coûte une énergie précieuse et peut même les amplifier. Les athlètes experts apprennent à développer une nouvelle relation avec ces émotions : les accueillir sans s'y identifier complètement.</p>
+            </div>
+
+            <p>Cette approche libère ton énergie mentale pour te concentrer sur ce qui compte vraiment : ta technique, ta tactique et ton engagement dans l'action.</p>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-title">Les 3 stratégies face aux émotions difficiles</h3>
+            <p>Au lieu de fuir ou combattre tes émotions inconfortables, voici trois approches constructives :</p>
+            
+            <div class="strategies-grid">
+                <div class="strategy-card">
+                    <div class="strategy-number">1</div>
+                    <div class="strategy-title">L'Acceptation</div>
+                    <div class="strategy-description">Accueillir l'émotion sans la fuir ni la juger</div>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-number">2</div>
+                    <div class="strategy-title">La Défusion</div>
+                    <div class="strategy-description">Observer tes pensées sans les croire aveuglément</div>
+                </div>
+                <div class="strategy-card">
+                    <div class="strategy-number">3</div>
+                    <div class="strategy-title">La Réévaluation</div>
+                    <div class="strategy-description">Changer ton angle de vue sur la situation</div>
+                </div>
+            </div>
+
+            <div class="tennis-example">
+                <div class="example-title">Exemple Tennis - Tie-break</div>
+                <p>Au lieu de fuir la pression d'un tie-break, <strong>accepte</strong> cette montée d'adrénaline : "Je sens mon cœur battre plus fort, c'est normal, ça me donne de l'énergie pour être plus explosif sur mes appuis."</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-title">Le piège de l'évitement émotionnel</h3>
+            <p>Éviter systématiquement les émotions inconfortables semble logique, mais c'est en fait contre-productif :</p>
+            
+            <div class="warning-box">
+                <div class="warning-title">Conséquences de l'évitement émotionnel</div>
+                <div class="warning-effects">
+                    <div class="effect-item">
+                        <strong>Zone de confort réduite</strong><br>
+                        Diminution progressive de ta capacité d'adaptation
+                    </div>
+                    <div class="effect-item">
+                        <strong>Anxiété amplifiée</strong><br>
+                        L'anticipation devient plus forte que la réalité
+                    </div>
+                    <div class="effect-item">
+                        <strong>Confiance fragilisée</strong><br>
+                        Perte de foi en tes capacités d'adaptation
+                    </div>
+                </div>
+            </div>
+
+            <p>Plutôt que d'éviter les situations qui génèrent du stress, apprends à naviguer avec ces émotions. C'est cette capacité d'adaptation qui te rendra plus fort mentalement.</p>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-title">Techniques pratiques de transformation</h3>
+            
+            <div class="technique-showcase">
+                <h4 style="margin-bottom: 20px; color: #2c3e50; font-size: 1.2em;">Technique de Défusion Cognitive</h4>
+                <div class="technique-steps">
+                    <div class="technique-step">Pensée limitante</div>
+                    <div class="technique-step">→</div>
+                    <div class="technique-step">Distance mentale</div>
+                    <div class="technique-step">→</div>
+                    <div class="technique-step">Impact réduit</div>
+                </div>
+                <p style="margin-top: 15px; font-size: 0.9em; color: #2c3e50; position: relative; z-index: 2;"><strong>Exemple :</strong> "Je ne vais pas y arriver" devient "Je viens d'avoir la pensée que je ne vais pas y arriver"</p>
+            </div>
+
+            <div class="tennis-example">
+                <div class="example-title">Changement de Perspective</div>
+                <p>Face à une situation stressante, demande-toi : <strong>"Comment mon athlète préféré verrait-il cette situation ?"</strong> ou <strong>"Comment je verrais cela dans 5 ans ?"</strong> Cette distance temporelle ou cette projection activate naturellement la réévaluation cognitive.</p>
+            </div>
+        </div>
+
+        <div class="tips-section">
+            <h3 class="tips-title">Conseils pratiques immédiats</h3>
+            
+            <div class="tip-item">
+                <strong>1. Technique de défusion simple :</strong> Quand une pensée limitante apparaît ("je ne vais pas y arriver"), reformule-la : "Je viens d'avoir la pensée que je ne vais pas y arriver". Cette distance mentale réduit son impact émotionnel.
+            </div>
+            
+            <div class="tip-item">
+                <strong>2. Exercice de changement de perspective :</strong> Face à une situation stressante, demande-toi : "Comment mon athlète préféré verrait-il cette situation ?" ou "Comment je verrais cela dans 5 ans ?". Cela active naturellement la réévaluation cognitive.
+            </div>
+        </div>
+
+        <div class="conclusion">
+            <p><strong>Les protocoles avancés incluent des techniques d'exposition progressive aux situations difficiles, des exercices de restructuration cognitive personnalisés et des stratégies spécifiques selon le type d'émotion et le contexte de performance.</strong></p>
+        </div>
+
+        <div class="navigation">
+            <a href="#" class="nav-button">← Chapitre 4</a>
+            <span style="color: #7f8c8d; font-weight: bold;">Chapitre 5 / 8</span>
+            <a href="#" class="nav-button">Chapitre 6 →</a>
+        </div>
+    </div>
+</body>
+</html>

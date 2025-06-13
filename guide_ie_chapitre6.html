@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Intelligence Émotionnelle et Performance Sportive - Chapitre 6</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #fff5f3 0%, #fee8e4 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: white;
+            padding: 30px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+            border-left: 6px solid #DD5227;
+        }
+
+        .main-title {
+            font-size: 2.2em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.1em;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .chapter-badge {
+            display: inline-block;
+            background: linear-gradient(45deg, #DD5227, #c4441f);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: bold;
+            font-size: 0.9em;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 15px;
+            box-shadow: 0 4px 15px rgba(221, 82, 39, 0.3);
+        }
+
+        .chapter-title {
+            font-size: 1.8em;
+            color: #2c3e50;
+            margin-bottom: 10px;
+            font-weight: 600;
+        }
+
+        .chapter-subtitle {
+            font-size: 1.1em;
+            color: #34495e;
+            font-style: italic;
+            margin-bottom: 30px;
+        }
+
+        .content-section {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+            border-left: 4px solid #DD5227;
+        }
+
+        .section-title {
+            font-size: 1.4em;
+            color: #2c3e50;
+            margin-bottom: 20px;
+            font-weight: 600;
+            position: relative;
+            padding-left: 20px;
+        }
+
+        .section-title::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 8px;
+            height: 8px;
+            background: white;
+            border-radius: 50%;
+            border: 2px solid #DD5227;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #DD5227, #c4441f);
+            color: white;
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .highlight-box::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100px;
+            height: 100px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .highlight-box::after {
+            content: '';
+            position: absolute;
+            bottom: -30%;
+            left: -30%;
+            width: 60px;
+            height: 60px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+
+        .communication-comparison {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+            margin: 25px 0;
+        }
+
+        .comparison-card {
+            padding: 20px;
+            border-radius: 15px;
+            text-align: center;
+            position: relative;
+        }
+
+        .comparison-negative {
+            background: linear-gradient(135deg, #ff6b6b, #ee5a5a);
+            color: white;
+        }
+
+        .comparison-positive {
+            background: linear-gradient(135deg, #4ecdc4, #44b3a3);
+            color: white;
+        }
+
+        .comparison-title {
+            font-weight: bold;
+            font-size: 1.2em;
+            margin-bottom: 15px;
+        }
+
+        .formula-box {
+            background: linear-gradient(135deg, #fee8e4, #fdd5ce);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 2px solid #DD5227;
+            text-align: center;
+        }
+
+        .formula-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 20px;
+        }
+
+        .formula-steps {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 20px 0;
+        }
+
+        .formula-step {
+            background: white;
+            padding: 15px 20px;
+            border-radius: 15px;
+            border: 2px solid #DD5227;
+            font-weight: bold;
+            color: #2c3e50;
+            min-width: 140px;
+            text-align: center;
+        }
+
+        .formula-plus {
+            color: #DD5227;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .communication-example {
+            background: #fff5f3;
+            padding: 20px;
+            border-radius: 12px;
+            margin: 20px 0;
+            border: 2px dashed #DD5227;
+            position: relative;
+        }
+
+        .communication-example::before {
+            content: '💬';
+            position: absolute;
+            top: -10px;
+            left: 20px;
+            background: white;
+            padding: 0 10px;
+            font-size: 1.2em;
+        }
+
+        .example-title {
+            font-weight: bold;
+            color: #2c3e50;
+            margin-bottom: 10px;
+        }
+
+        .criticism-analysis {
+            background: linear-gradient(135deg, #fee8e4, #fdd5ce);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            border: 2px solid #DD5227;
+        }
+
+        .criticism-flow {
+            display: grid;
+            grid-template-columns: 1fr auto 1fr;
+            gap: 15px;
+            align-items: center;
+            margin: 20px 0;
+        }
+
+        .criticism-card {
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            border-left: 4px solid #DD5227;
+            text-align: center;
+        }
+
+        .criticism-arrow {
+            color: #DD5227;
+            font-size: 1.5em;
+            font-weight: bold;
+        }
+
+        .criticism-title {
+            font-weight: bold;
+            color: #DD5227;
+            margin-bottom: 8px;
+        }
+
+        .criticism-content {
+            color: #5a6c7d;
+            font-size: 0.9em;
+        }
+
+        .tips-section {
+            background: linear-gradient(135deg, #fee8e4, #fdd5ce);
+            padding: 25px;
+            border-radius: 15px;
+            margin: 25px 0;
+            color: #2c3e50;
+            border: 2px solid #DD5227;
+        }
+
+        .tips-title {
+            font-size: 1.3em;
+            font-weight: bold;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+        }
+
+        .tips-title::before {
+            content: '💡';
+            margin-right: 10px;
+            font-size: 1.2em;
+        }
+
+        .tip-item {
+            background: rgba(255, 255, 255, 0.9);
+            padding: 15px;
+            border-radius: 10px;
+            margin-bottom: 15px;
+            border-left: 4px solid #DD5227;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+        }
+
+        .tip-item:last-child {
+            margin-bottom: 0;
+        }
+
+        ul {
+            padding-left: 20px;
+            margin: 15px 0;
+        }
+
+        li {
+            margin-bottom: 8px;
+            color: #34495e;
+        }
+
+        li strong {
+            color: #2c3e50;
+        }
+
+        p {
+            margin-bottom: 15px;
+            color: #34495e;
+            text-align: justify;
+        }
+
+        .conclusion {
+            background: linear-gradient(135deg, #fff5f3, #fee8e4);
+            padding: 25px;
+            border-radius: 15px;
+            margin-top: 30px;
+            text-align: center;
+            border: 2px solid #DD5227;
+        }
+
+        .navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            padding: 20px;
+            background: white;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+        }
+
+        .nav-button {
+            background: linear-gradient(45deg, #DD5227, #c4441f);
+            color: white;
+            padding: 12px 20px;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s ease;
+        }
+
+        .nav-button:hover {
+            transform: translateY(-2px);
+        }
+
+        .nav-button.disabled {
+            background: #e0e0e0;
+            color: #999;
+            cursor: not-allowed;
+        }
+
+        @media (max-width: 768px) {
+            .container {
+                padding: 15px;
+            }
+            
+            .main-title {
+                font-size: 1.8em;
+            }
+            
+            .communication-comparison {
+                grid-template-columns: 1fr;
+            }
+            
+            .content-section {
+                padding: 20px;
+            }
+
+            .formula-steps {
+                flex-direction: column;
+            }
+
+            .formula-plus {
+                transform: rotate(90deg);
+            }
+
+            .criticism-flow {
+                grid-template-columns: 1fr;
+                gap: 10px;
+            }
+
+            .criticism-arrow {
+                transform: rotate(90deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">Intelligence Émotionnelle et Performance Sportive</h1>
+            <p class="subtitle">Guide Pratique - 8 chapitres pour optimiser ta performance sportive grâce à de meilleures compétences émotionnelles</p>
+        </div>
+
+        <div class="content-section">
+            <div class="chapter-badge">Chapitre 6</div>
+            <h2 class="chapter-title">Communiquer tes Émotions de Manière Constructive</h2>
+            <p class="chapter-subtitle">[Exprimer sans accuser, écouter sans juger]</p>
+
+            <div class="highlight-box">
+                <h3 class="section-title" style="color: white; padding-left: 0; margin-bottom: 15px;">Pourquoi c'est crucial pour ta performance</h3>
+                <p style="color: white; margin-bottom: 15px;">Le sport est un environnement relationnel intense : coéquipiers, entraîneurs, famille, adversaires. Ta capacité à exprimer tes émotions de manière constructive influence directement la qualité de ces relations et, par extension, ton climat de performance.</p>
+                <p style="color: white; margin-bottom: 0;">Une communication émotionnelle maîtrisée prévient les conflits, renforce la cohésion d'équipe et crée un environnement de soutien propice à ton développement.</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-title">La différence entre jugement et expression émotionnelle</h3>
+            <p>Le jugement crée de la défensive, l'expression authentique invite au dialogue.</p>
+            
+            <div class="communication-comparison">
+                <div class="comparison-card comparison-negative">
+                    <div class="comparison-title">❌ Jugement</div>
+                    <p>"Tu es égoïste !"</p>
+                    <small>(attaque la personne)</small>
+                </div>
+                <div class="comparison-card comparison-positive">
+                    <div class="comparison-title">✅ Expression</div>
+                    <p>"Je me sens exclu quand..."</p>
+                    <small>(partage ton ressenti)</small>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-title">La formule magique : Observation + Émotion + Besoin</h3>
+            
+            <div class="formula-box">
+                <div class="formula-title">Structure efficace pour communiquer</div>
+                <div class="formula-steps">
+                    <div class="formula-step">
+                        🔍<br><strong>Observation</strong><br>factuelle
+                    </div>
+                    <div class="formula-plus">+</div>
+                    <div class="formula-step">
+                        ❤️<br><strong>Ton émotion</strong><br>ressentie
+                    </div>
+                    <div class="formula-plus">+</div>
+                    <div class="formula-step">
+                        🎯<br><strong>Ton besoin</strong><br>à satisfaire
+                    </div>
+                </div>
+            </div>
+
+            <div class="communication-example">
+                <div class="example-title">Exemple avec ton entraîneur</div>
+                <p><strong>Observation :</strong> "Quand tu me corriges pendant que je sers"</p>
+                <p><strong>Émotion :</strong> "Je me sens déconcentré"</p>
+                <p><strong>Besoin :</strong> "Car j'ai besoin de me focaliser sur mes sensations"</p>
+                <p><strong>Demande :</strong> "Peux-tu attendre le changement de côté ?"</p>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h3 class="section-title">Les besoins cachés derrière les critiques</h3>
+            <p>Quand quelqu'un te critique, cherche l'émotion et le besoin derrière :</p>
+            
+            <div class="criticism-analysis">
+                <div class="criticism-flow">
+                    <div class="criticism-card">
+                        <div class="criticism-title">Critique entendue</div>
+                        <div class="criticism-content">"Tu ne t'investis jamais assez !"</div>
+                    </div>
+                    <div class="criticism-arrow">→</div>
+                    <div class="criticism-card">
+                        <div class="criticism-title">Besoin possible</div>
+                        <div class="criticism-content">Voir tes progrès, t'aider à réussir</div>
+                    </div>
+                </div>
+                <p style="text-align: center; margin-top: 15px; font-style: italic; color: #5a6c7d;">Derrière chaque critique se cache souvent une intention positive</p>
+            </div>
+        </div>
+
+        <div class="tips-section">
+            <h3 class="tips-title">Conseils pratiques immédiats</h3>
+            
+            <div class="tip-item">
+                <strong>1. Technique du "JE" responsable :</strong> Remplace "Tu me stresses" par "Je me sens stressé quand...". Cela évite la défensive et ouvre le dialogue.
+            </div>
+            
+            <div class="tip-item">
+                <strong>2. Écoute active des émotions :</strong> Quand quelqu'un exprime une frustration, reformule son émotion : "J'entends que tu es déçu..." avant de répondre au contenu. Cela crée de la connexion.
+            </div>
+        </div>
+
+        <div class="conclusion">
+            <p><strong>Les techniques avancées comprennent la gestion des conflits en équipe, la communication avec les entraîneurs selon leur style, et les stratégies de négociation constructive dans l'environnement sportif.</strong></p>
+        </div>
+
+        <div class="navigation">
+            <a href="#" class="nav-button">← Chapitre 5</a>
+            <span style="color: #7f8c8d; font-weight: bold;">Chapitre 6 / 8</span>
+            <a href="#" class="nav-button">Chapitre 7 →</a>
+        </div>
+    </div>
+</body>
+</html>
