@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Guide Intelligence Émotionnelle - Sommaire</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #f8f9ff 0%, #e3f2fd 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .header {
+            text-align: center;
+            margin-bottom: 40px;
+            background: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 15px 35px rgba(0,0,0,0.1);
+            border-left: 6px solid #DD5227;
+        }
+
+        .main-title {
+            font-size: 2.5em;
+            color: #2c3e50;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.2em;
+            color: #7f8c8d;
+            font-style: italic;
+            margin-bottom: 20px;
+        }
+
+        .description {
+            font-size: 1.1em;
+            color: #34495e;
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+        }
+
+        .chapters-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 25px;
+            margin-top: 40px;
+        }
+
+        .chapter-card {
+            background: white;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+            display: block;
+        }
+
+        /* Couleurs par chapitre */
+        .chapter-card.blue {
+            border-left: 5px solid #9DC9E7;
+        }
+
+        .chapter-card.yellow {
+            border-left: 5px solid #FFD243;
+        }
+
+        .chapter-card.red {
+            border-left: 5px solid #DD5227;
+        }
+
+        .chapter-card.blue .chapter-number {
+            background: linear-gradient(45deg, #9DC9E7, #7fb8d3);
+        }
+
+        .chapter-card.yellow .chapter-number {
+            background: linear-gradient(45deg, #FFD243, #e6bc2e);
+        }
+
+        .chapter-card.red .chapter-number {
+            background: linear-gradient(45deg, #DD5227, #c44620);
+        }
+
+        .chapter-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+            text-decoration: none;
+        }
+
+        .chapter-number {
+            display: inline-block;
+            color: white;
+            padding: 8px 16px;
+            border-radius: 20px;
+            font-weight: bold;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .chapter-title {
+            font-size: 1.4em;
+            color: #2c3e50;
+            font-weight: 600;
+            margin-bottom: 10px;
+        }
+
+        .chapter-subtitle {
+            color: #7f8c8d;
+            font-style: italic;
+            font-size: 1em;
+            margin-bottom: 15px;
+        }
+
+        .chapter-preview {
+            color: #5a6c7d;
+            font-size: 0.95em;
+            line-height: 1.5;
+        }
+
+        .cta-section {
+            text-align: center;
+            margin-top: 50px;
+            background: linear-gradient(135deg, #DD5227, #c44620);
+            color: white;
+            padding: 40px;
+            border-radius: 20px;
+            box-shadow: 0 10px 30px rgba(221, 82, 39, 0.3);
+        }
+
+        .cta-title {
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .cta-text {
+            font-size: 1.1em;
+            opacity: 0.95;
+        }
+
+        @media (max-width: 768px) {
+            .chapters-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .main-title {
+                font-size: 2em;
+            }
+            
+            .chapter-card {
+                padding: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1 class="main-title">Intelligence Émotionnelle et Performance Sportive</h1>
+            <p class="subtitle">Guide Pratique Complet</p>
+            <p class="description">8 chapitres pour développer tes compétences émotionnelles et optimiser ta performance sportive grâce à une meilleure gestion mentale.</p>
+        </div>
+
+        <div class="chapters-grid">
+            <a href="guide_ie_chapitre1.html" class="chapter-card blue">
+                <div class="chapter-number">Chapitre 1</div>
+                <h3 class="chapter-title">Introduction aux Compétences Émotionnelles</h3>
+                <p class="chapter-subtitle">Comprendre l'impact de tes émotions sur ta performance</p>
+                <p class="chapter-preview">Découvre les 6 émotions universelles dans le sport et comment elles influencent tes performances. Apprends à décoder tes émotions pour les transformer en alliés.</p>
+            </a>
+
+            <a href="guide_ie_chapitre2.html" class="chapter-card yellow">
+                <div class="chapter-number">Chapitre 2</div>
+                <h3 class="chapter-title">Titre du Chapitre 2</h3>
+                <p class="chapter-subtitle">Sous-titre du chapitre 2</p>
+                <p class="chapter-preview">Description du contenu du chapitre 2...</p>
+            </a>
+
+            <a href="guide_ie_chapitre3.html" class="chapter-card red">
+                <div class="chapter-number">Chapitre 3</div>
+                <h3 class="chapter-title">Titre du Chapitre 3</h3>
+                <p class="chapter-subtitle">Sous-titre du chapitre 3</p>
+                <p class="chapter-preview">Description du contenu du chapitre 3...</p>
+            </a>
+
+            <a href="guide_ie_chapitre4.html" class="chapter-card blue">
+                <div class="chapter-number">Chapitre 4</div>
+                <h3 class="chapter-title">Titre du Chapitre 4</h3>
+                <p class="chapter-subtitle">Sous-titre du chapitre 4</p>
+                <p class="chapter-preview">Description du contenu du chapitre 4...</p>
+            </a>
+
+            <a href="guide_ie_chapitre5.html" class="chapter-card yellow">
+                <div class="chapter-number">Chapitre 5</div>
+                <h3 class="chapter-title">Titre du Chapitre 5</h3>
+                <p class="chapter-subtitle">Sous-titre du chapitre 5</p>
+                <p class="chapter-preview">Description du contenu du chapitre 5...</p>
+            </a>
+
+            <a href="guide_ie_chapitre6.html" class="chapter-card red">
+                <div class="chapter-number">Chapitre 6</div>
+                <h3 class="chapter-title">Titre du Chapitre 6</h3>
+                <p class="chapter-subtitle">Sous-titre du chapitre 6</p>
+                <p class="chapter-preview">Description du contenu du chapitre 6...</p>
+            </a>
+
+            <a href="guide_ie_chapitre7.html" class="chapter-card blue">
+                <div class="chapter-number">Chapitre 7</div>
+                <h3 class="chapter-title">Titre du Chapitre 7</h3>
+                <p class="chapter-subtitle">Sous-titre du chapitre 7</p>
+                <p class="chapter-preview">Description du contenu du chapitre 7...</p>
+            </a>
+
+            <a href="guide_ie_chapitre8.html" class="chapter-card yellow">
+                <div class="chapter-number">Chapitre 8</div>
+                <h3 class="chapter-title">Titre du Chapitre 8</h3>
+                <p class="chapter-subtitle">Sous-titre du chapitre 8</p>
+                <p class="chapter-preview">Description du contenu du chapitre 8...</p>
+            </a>
+        </div>
+
+        <div class="cta-section">
+            <h2 class="cta-title">Prêt à développer ton intelligence émotionnelle ?</h2>
+            <p class="cta-text">Commence par le chapitre 1 et progresse à ton rythme. Chaque chapitre contient des exercices pratiques et des conseils concrets pour améliorer ta performance sportive.</p>
+        </div>
+    </div>
+</body>
+</html>
